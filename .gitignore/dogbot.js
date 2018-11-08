@@ -20,8 +20,8 @@ bot.on("message", message => {
         .addField("~aide", "un probleme? un souci ? Dog`Bot sauras vous satisfaire")
         .addField("~clear", "efface ton historique au 36303630666")
         .addField("~infodogbot", "voici ma carte d'identiter meusieur l'agent !")
-        .addField("~rep", "je fait perroquet integrer")
         .addField("~blague", "tu et fan de tunning ? tu t'apelle jacky ? alors casse toi en espagne !")
+        message.sedn(aide_embed);
     }
 });
 bot.on("message", message => {
@@ -35,7 +35,7 @@ bot.on("message", message => {
         message.channel.bulkDelete(args[0]).then(() => {
             message.reply(`${args[0]} message Suprimer , je peut clear t'es historique aussi ;)`);
         })
-})
+});
 
 bot.on('guildMemberRemove', member => {
 
@@ -50,12 +50,6 @@ bot.on("message", message => {
     }
 })
 
-bot.on("message", message => {
-    if(message.content === prefix + "rep"){
-     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("t'as cru quoi ? que j'etais un chien facile ?");
-     let repmessage = args.join(" ");
-     message.channel.send(repmessage);
- }});
 
  bot.on("message", message => {
      if(message.content === prefix + "blague"){
@@ -80,3 +74,4 @@ bot.on("message", message => {
      }
  })
  bot.login(process.env.TOKEN);
+
