@@ -2,14 +2,13 @@
   "name": "dogbot",
   "version": "1.0.0",
   "description": "",
-  "main": "Dog'Bot.js",
+  "main": "dog.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "nefer",
+  "author": "neferr",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.4.2",
-    "ytdl-core": "^0.26.1"
+    "discord.js": "^11.4.2"
   }
 }
