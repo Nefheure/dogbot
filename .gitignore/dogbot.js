@@ -33,7 +33,7 @@ bot.on("message", message => {
 
         if(!args[0]) return message.channel.send("tu doit specifier un Nombre de message a effacer sinon sa morche po !")
         message.channel.bulkDelete(args[0]).then(() => {
-            message.reply(`${args[0]} message Suprimer , je peut clear t'es historique aussi ;)`);
+            message.reply(`${args[0]} message Suprimer , je peut clear t'es historique aussi`);
         })
 });
 
