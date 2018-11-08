@@ -21,7 +21,7 @@ bot.on("message", message => {
         .addField("~clear", "efface ton historique au 36303630666")
         .addField("~infodogbot", "voici ma carte d'identiter meusieur l'agent !")
         .addField("~blague", "tu et fan de tunning ? tu t'apelle jacky ? alors casse toi en espagne !")
-        message.sedn(aide_embed);
+        message.send(aide_embed);
     }
 });
 bot.on("message", message => {
