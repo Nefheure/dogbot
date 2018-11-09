@@ -1,17 +1,17 @@
 const Discord = require('discord.js');
 
-const prefix = "~";
+const prefix = "d-";
 
 var bot = new Discord.Client();
 
 bot.on("ready", function() {
 
     console.log("Dog'Bot Cool !");
-    bot.user.setActivity("~aide")
+    bot.user.setActivity("Je ne peut pas vous aider pour le moment...")
     bot.user.setStatus("dnd")
 })
 
-bot.on("message", message => {
+bot.on('message', message => {
 
     if(message.content === prefix + "aide"){
         var aide_embed = new Discord.RichEmbed()
@@ -21,20 +21,22 @@ bot.on("message", message => {
         .addField("~clear", "efface ton historique au 36303630666")
         .addField("~infodogbot", "voici ma carte d'identiter meusieur l'agent !")
         .addField("~blague", "tu et fan de tunning ? tu t'apelle jacky ? alors casse toi en espagne !")
-        message.channel.send(aide_embed);
+        message.semd(aide_embed);
     }
 });
-bot.on("message", message => {
+
+bot.on('message', message => {
 
     if(message.content.startsWith(prefix + "clear")) {
         if(!message.guild.member(message.autor).hasPermission("MANAGE_MESSAGES")) return message.channel.send("pas de permission, pas de reconpence.");
-    }
+    
         let args = message.content.split(" ").slice(1);
 
         if(!args[0]) return message.channel.send("tu doit specifier un Nombre de message a effacer sinon sa morche po !")
         message.channel.bulkDelete(args[0]).then(() => {
-            message.reply(`${args[0]} message Suprimer , je peut clear t'es historique aussi`);
-        })
+            message.reply(`${args[0]} message Suprimer , je peut clear t'es historique aussi ;)`);
+        
+        })};
 });
 
 bot.on('guildMemberRemove', member => {
@@ -43,7 +45,7 @@ bot.on('guildMemberRemove', member => {
     
  })
 
-bot.on("message", message => {
+bot.on('message', message => {
 
     if(message.content === prefix + "infodogbot"){
         message.channel.send("Dog`Bot,12 ans, mange du papier en cour et le recrache sur ces camarade, je suis un bot. je suis un fou. je suis en connexion avec YqoshhBot *Malheureusement*. etre un bot ces un metier ne pas faire sont metier en et un autre, un default ? je dirait..... perfectionniste");
@@ -51,7 +53,7 @@ bot.on("message", message => {
 })
 
 
- bot.on("message", message => {
+ bot.on('message', message => {
      if(message.content === prefix + "blague"){
          if(random ==1){
             message.channel.send(" Dieux: arret t'es connerie Eve..    Eve: https://pbs.twimg.com/media/DMR5FaZWAAIMA71.jpg");
