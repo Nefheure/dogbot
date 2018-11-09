@@ -14,14 +14,14 @@ bot.on("ready", function() {
 bot.on('message', message => {
 
     if(message.content === prefix + "aide"){
-        var aide_embed = new Discord.RichEmbed()
+        let aide_embed = new Discord.RichEmbed()
         .setColor("#2EFE2E")
         .setTitle("comand aide.")
         .addField("~aide", "un probleme? un souci ? Dog`Bot sauras vous satisfaire")
         .addField("~clear", "efface ton historique au 36303630666")
         .addField("~infodogbot", "voici ma carte d'identiter meusieur l'agent !")
         .addField("~blague", "tu et fan de tunning ? tu t'apelle jacky ? alors casse toi en espagne !")
-        message.sendMessage(aide_embed);
+        message.send(aide_embed);
     }
 });
 
@@ -76,4 +76,5 @@ bot.on('message', message => {
      }
  })
  bot.login(process.env.TOKEN);
+
 
