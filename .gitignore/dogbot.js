@@ -59,8 +59,8 @@ bot.on('message', message => {
 
 
 bot.on('message', message => {
-     if(message.content === prefix + "blague"){
-        random();
+     if(message.content === prefix + "blabla"){
+     random();
 
         if (random ==1){
             message.channel.send("Dieux: arret t'es connerie Eve..    Eve: https://pbs.twimg.com/media/DMR5FaZWAAIMA71.jpg");
@@ -89,5 +89,6 @@ bot.on('message', message => {
 });
 
 bot.login(process.env.TOKEN);
+
 
 
