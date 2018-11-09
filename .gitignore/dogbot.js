@@ -50,14 +50,14 @@ bot.on('message', message => {
     if(message.content === prefix + "infodogbot"){
         message.channel.send("Dog`Bot,12 ans, mange du papier en cour et le recrache sur ces camarade, je suis un bot. je suis un fou. je suis en connexion avec YqoshhBot *Malheureusement*. etre un bot ces un metier ne pas faire sont metier en et un autre, un default ? je dirait..... perfectionniste");
     }
-})
+});
 
 
- bot.on('message', message => {
+bot.on('message', message => {
      if(message.content === prefix + "blague"){
          if(random ==1){
             message.channel.send(" Dieux: arret t'es connerie Eve..    Eve: https://pbs.twimg.com/media/DMR5FaZWAAIMA71.jpg");
-         }
+        }
          if(random ==2){
              message.channel.send("le Samedi soir, j'ai crees l'alcool. Le dimanche matin, j'ai crees le Vomi.");
         }
@@ -74,7 +74,7 @@ bot.on('message', message => {
              message.channel.send("les maisons ne chuchote pas elles mur mur");
         }
      }
- })
+});
  bot.login(process.env.TOKEN);
 
 
