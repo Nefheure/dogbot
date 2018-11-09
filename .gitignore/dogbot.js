@@ -60,10 +60,10 @@ bot.on('message', message => {
 
 bot.on('message', message => {
      if(message.content === prefix + "blague"){
-      random();
+        random();
 
         if (random == 1){
-            message.channel.send(" Dieux: arret t'es connerie Eve..    Eve: https://pbs.twimg.com/media/DMR5FaZWAAIMA71.jpg");
+            message.channel.send("Dieux: arret t'es connerie Eve..    Eve: https://pbs.twimg.com/media/DMR5FaZWAAIMA71.jpg");
         }
 
         if (random == 2){
@@ -89,4 +89,5 @@ bot.on('message', message => {
 });
 
 bot.login(process.env.TOKEN);
+
 
