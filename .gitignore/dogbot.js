@@ -11,6 +11,11 @@ bot.on("ready", function() {
     bot.user.setStatus("dnd")
 })
 
+function random(min, max) {
+    min = Math.cell(0);
+    max = Math.floor(3);
+    randnum = Math.floor(Math.random() * (max - min +1) + min);
+}
 bot.on('message', message => {
 
     if(message.content === prefix + "aide"){
@@ -55,33 +60,33 @@ bot.on('message', message => {
 
 bot.on('message', message => {
      if(message.content === prefix + "blague"){
+      random();
 
-        if(random == 1){
+        if (random == 1){
             message.channel.send(" Dieux: arret t'es connerie Eve..    Eve: https://pbs.twimg.com/media/DMR5FaZWAAIMA71.jpg");
         }
 
-        if(random == 2){
+        if (random == 2){
              message.channel.send("le Samedi soir, j'ai crees l'alcool. Le dimanche matin, j'ai crees le Vomi.");
         }
 
-        if(random == 3){
+        if (random == 3){
              message.channel.send("une fille dans ma licence s'appelle clementine et a chaque fois quel marche jlui dit Heee t presser ? g 21 ans.");
         }
 
-        if(random == 4){
+        if (random == 4){
              message.channel.send("deux patate discute, une dit a l'autre<<Tu pense qu'un jour on pourras vivre sans avoir la peur de se faire eplucher?>> l'autre repond <<patate que oui.....Patate que non>>");
         }
 
-        if(random == 5){
+        if (random == 5){
              message.channel.send("- Bonjour j'aimerais changer de nom. - Oui bien sûr monsieur, vous vous appellez comment ? Je m'appelle Jacques Leconard. - Et vous voudriez vous appeller comment ? J'aimerais m'appeller Paul Leconard.");
         }
-        
-        if(random == 6){
+
+        if (random == 6){
              message.channel.send("les maisons ne chuchote pas elles mur mur");
         }
      }
 });
 
 bot.login(process.env.TOKEN);
-
 
