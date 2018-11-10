@@ -39,6 +39,7 @@ bot.on('message', message => {
         .setColor("#000000")
         .setTitle("Si vous voulez demander Une Banniere, Un Logo ou autre a **DogSterFX** tous se passe dans le lien ci-dessous !")
         .addField("*lien :*", "https://goo.gl/forms/JY0777g2zWOoGQR33")
+        message.channel.sendMessage(gfx_embed);
     }
 });
 
