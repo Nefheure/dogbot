@@ -7,8 +7,8 @@ var bot = new Discord.Client();
 bot.on("ready", function() {
 
     console.log("Dog'Bot ok !");
-    bot.user.setActivity("Mise a Jour...")
-    bot.user.setStatus("dnd")
+    bot.user.setActivity("?aide")
+    bot.user.setStatus("online")
 })
 
 bot.on('message', message => {
