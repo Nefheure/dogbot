@@ -6,16 +6,10 @@ var bot = new Discord.Client();
 
 bot.on("ready", function() {
 
-    console.log("Dog'Bot Cool !");
+    console.log("Dog'Bot ok !");
     bot.user.setActivity("?aide Bientot Disponnible.")
     bot.user.setStatus("idle")
 })
-
-function random(min, max) {
-    min = Math.ceil(0);
-    max = Math.floor(6);
-    randnum = Math.floor(Math.random() * (max - min +1) + min);
-};
 
 bot.on('message', message => {
 
@@ -27,4 +21,16 @@ bot.on('message', message => {
     }
 });
 
+bot.on('message', message => {
+
+    if(message.content === prefix + "youtube"){
+        var youtube_embed = new Discord.RichEmbed()
+        .setColor("#000000")
+        .setTitle("Voici la chaine Youtube de **DogSterFX** si vous avez manquer une video courer la voir ! ")
+        .addField("*lien :*", "https://www.youtube.com/channel/UCUm2bH23aU5SdqZfKX5nE_g")
+        message.channel.sendMessage(youtube_embed);
+    }
+});
+
 bot.login(process.env.TOKEN);
+
