@@ -16,7 +16,9 @@ bot.on('message', message => {
     if(message.content === prefix + "aide"){
         var aide_embed = new Discord.RichEmbed()
         .setColor("#000000")
-        .setTitle("cette commande et en Preparation.")
+        .setTitle("Voici la command **aide**")
+        .addField("?youtube", "vous envoie un lien youtube vers la chaine de **DogSterFX**")
+        .addField("?gfx", "Vous envoie un lien vers un GoogleForms Pour passer command")
         message.channel.sendMessage(aide_embed);
     }
 });
